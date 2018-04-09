@@ -3,6 +3,8 @@ Hide Discord Sidebars
 
 Hides sidebars in Discord so you have a little extra space and a cleaner view. Show them again by hovering over them.
 
+[This doesn't work too well with transparent themes](images/screenshot-transparent.png) as the channel and member lists are still visible behind the chat contents. You can add a background image to `.chat .content > div:first-child` to hide the channel/member lists.
+
 Installation
 ---
 
