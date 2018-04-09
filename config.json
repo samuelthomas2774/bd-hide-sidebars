@@ -1,0 +1,18 @@
+{
+    "info": {
+        "name": "Hide Sidebars",
+        "authors": [
+            {
+                "name": "Samuel Elliott",
+                "url": "https://samuelelliott.ml",
+                "discord_id": "284056145272766465",
+                "github_username": "samuelthomas2774",
+                "twitter_username": "_samuelelliott"
+            }
+        ],
+        "version": 1.0,
+        "description": "Hides sidebars in Discord so you have a little extra space and a cleaner view. Show them again by hovering over them.\n\nhttps://github.com/samuelthomas2774/bd-hide-sidebars",
+        "type": "sass"
+    },
+    "main": "src/hide-sidebars.scss"
+}
