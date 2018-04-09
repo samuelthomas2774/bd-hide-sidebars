@@ -19,6 +19,8 @@ Download the zip archive from the [releases][] page and extract it to the Better
 Screenshots
 ---
 
-![Activity page](images/screenshot-activity-1.jpg)
+![A server with the dark theme](images/screenshot-server-dark-1.png)
 
-![Server](images/screenshot-server-1.png)
+![The activity view with the light theme](images/screenshot-activity-light-1.jpg)
+
+![A server with the light theme](images/screenshot-server-light-1.png)
