@@ -5,7 +5,7 @@ const inject = require('gulp-inject-string');
 const config = require('./config');
 
 const header_meta = {
-    name: config.info.name,
+    name: config.info.id,
     description: config.info.description,
     author: config.info.authors.map(a => a.name).join(', '),
     version: config.info.version
