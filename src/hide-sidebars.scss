@@ -17,10 +17,15 @@ div[class*="channels-"] {
 		&:not(.chat) > [class*="scrollerWrap-"] > div[class*="scroller-"],
 		&.chat > [class*="titleWrapper-"] > div,
 		&.chat > .content .messages.scroller,
-		&.chat > .content > .flex-spacer > form {
+		&.chat > .content > .flex-spacer > form,
+		&.chat > .content > .flex-spacer > form > div[class*="typing-"] {
 			transition: padding-left 0.2s ease, padding-right 0.2s ease, margin-left 0.2s ease;
 			padding-left: 100px;
 			padding-right: 100px;
+		}
+		
+		&.chat > .content > .flex-spacer > form > div[class*="typing-"] {
+			box-sizing: border-box;
 		}
 		
 		// Main panel contents shadow - this is shown when the channel list is showing and some of the main panel contents is hidden
@@ -68,7 +73,8 @@ div[class*="channels-"] {
 			&:not(.chat) > *:nth-child(2):not([class*="scrollerWrap-"]),
 			&:not(.chat) > *:nth-child(2)[class*="scrollerWrap-"] > div[class*="scroller-"],
 			&.chat > .content .messages.scroller,
-			&.chat > .content > .flex-spacer > form {
+			&.chat > .content > .flex-spacer > form,
+			&.chat > .content > .flex-spacer > form > div[class*="typing-"] {
 				margin-right: -70px;
 				padding-left: 20px;
 				padding-right: 20px;
@@ -126,7 +132,8 @@ svg[class*="iconDefault-"][name="People"] {
 	margin-right: 0px;
 	
 	.messages.scroller,
-	> form {
+	> form,
+	> form > div[class*="typing-"] {
 		padding-left: 20px;
 		padding-right: 20px;
 		margin-left: -70px;
