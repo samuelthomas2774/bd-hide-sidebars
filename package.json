@@ -1,0 +1,13 @@
+{
+    "devDependencies": {
+        "gulp": "^3.9.1",
+        "gulp-inject-string": "^1.1.1",
+        "gulp-rename": "^1.2.2",
+        "node-sass": "^4.8.3"
+    },
+    "scripts": {
+        "build": "node-sass src/hide-sidebars.scss dist/hide-sidebars.css --source-map-contents --source-map-embed",
+        "watch": "npm run build && npm run build -- --watch --recursive",
+        "release": "node-sass src/hide-sidebars.scss dist/hide-sidebars.min.css --output-style compressed && gulp release"
+    }
+}

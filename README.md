@@ -26,3 +26,8 @@ Screenshots
 ![The activity view with the light theme](images/screenshot-activity-light-1.jpg)
 
 ![A server with the light theme](images/screenshot-server-light-1.png)
+
+Building
+---
+
+Run `npm run release` to create the `.theme.css` file for BetterDiscord v1. BetterDiscord v2 automatically compiles themes for you.
