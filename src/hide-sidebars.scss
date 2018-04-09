@@ -139,7 +139,7 @@ svg[class*="iconDefault-"][name="People"] {
 }
 
 // Members list
-.channel-members-wrap {
+div[class*="membersWrap-"] {
 	transition: transform 0.2s ease, opacity 0.2s ease;
 	z-index: 0;
 	
