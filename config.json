@@ -11,7 +11,7 @@
                 "twitter_username": "_samuelelliott"
             }
         ],
-        "version": "1.1.1",
+        "version": "1.2.0",
         "description": "Hides sidebars in Discord so you have a little extra space and a cleaner view. Show them again by hovering over them.\n\nhttps://github.com/samuelthomas2774/bd-hide-sidebars",
         "type": "sass"
     },
