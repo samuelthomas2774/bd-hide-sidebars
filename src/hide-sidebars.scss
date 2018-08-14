@@ -42,7 +42,7 @@
             position: relative;
             float: right;
             width: 5px;
-            height: 100%;
+            height: 100vh;
             margin-right: 0px;
             margin-left: -5px;
             z-index: 2;
@@ -125,7 +125,7 @@ svg.da-iconInactive[name="People"] {
     // Chat contents shadow
     &::before {
         content: "";
-        position: fixed;
+        position: absolute;
         float: left;
         width: 5px;
         height: 100%;
