@@ -16,20 +16,20 @@
         &:not(.da-chat) > :not(.da-scrollerWrap),
         &:not(.da-chat) > .da-scrollerWrap > .da-scroller,
         &.da-chat > .da-titleWrapper > div,
-        &.da-chat > .da-content .da-messages,
-        &.da-chat > .da-content > .flex-spacer > form,
-        &.da-chat > .da-content > .flex-spacer > form > .da-typing {
+        &.da-chat > .da-content [class*="messages-"],
+        &.da-chat > .da-content > .da-flex > form,
+        &.da-chat > .da-content > .da-flex > form > .da-typing {
             transition: padding-left 0.2s ease, padding-right 0.2s ease, margin-left 0.2s ease;
             padding-left: 100px;
             padding-right: 100px;
         }
 
-        &.da-chat > .da-content > .flex-spacer > form > .da-typing {
+        &.da-chat > .da-content > .da-flex > form > .da-typing {
             box-sizing: border-box;
         }
 
-        &.da-chat > .da-content > .flex-spacer .da-newMessagesBar,
-        &.da-chat > .da-content > .flex-spacer .da-jumpToPresentBar {
+        &.da-chat > .da-content > .da-flex .da-newMessagesBar,
+        &.da-chat > .da-content > .da-flex .da-jumpToPresentBar {
             transition: margin-left 0.2s ease, margin-right 0.2s ease;
             margin-left: 100px;
             margin-right: 100px;
@@ -79,16 +79,16 @@
             // Main panel contents
             &:not(.da-chat) > :nth-child(2):not(.da-scrollerWrap),
             &:not(.da-chat) > :nth-child(2).da-scrollerWrap > .da-scroller,
-            &.da-chat > .da-content .da-messages,
-            &.da-chat > .da-content > .flex-spacer > form,
-            &.da-chat > .da-content > .flex-spacer > form > .da-typing {
+            &.da-chat > .da-content [class*="messages-"],
+            &.da-chat > .da-content > .da-flex > form,
+            &.da-chat > .da-content > .da-flex > form > .da-typing {
                 margin-right: -70px;
                 padding-left: 0;
                 padding-right: 0;
             }
 
-            &.da-chat > .da-content > .flex-spacer .da-newMessagesBar,
-            &.da-chat > .da-content > .flex-spacer .da-jumpToPresentBar {
+            &.da-chat > .da-content > .da-flex .da-newMessagesBar,
+            &.da-chat > .da-content > .da-flex .da-jumpToPresentBar {
                 margin-left: 0;
                 margin-right: -70px;
             }
@@ -111,7 +111,7 @@ svg.da-iconInactive[name="People"] {
 }
 
 // Chat contents (messages and text area) when the members list is not being hovered over
-.da-chat .da-content > .flex-spacer:not(:only-child) {
+.da-chat > .da-content > .da-flex:not(:only-child) {
     transition: margin-right 0.2s ease, border-right 0.2s ease;
     z-index: 1;
 
@@ -141,10 +141,10 @@ svg.da-iconInactive[name="People"] {
 }
 
 // Chat contents when the members list is being hovered over
-.da-chat .da-content:hover > .flex-spacer:not(:only-child):not(:hover) {
+.da-chat .da-content:hover > .da-flex:not(:only-child):not(:hover) {
     margin-right: 0px;
 
-    .da-messages,
+    [class*="messages-"],
     > form,
     > form > .da-typing {
         padding-left: 0px;
@@ -173,7 +173,7 @@ svg.da-iconInactive[name="People"] {
     opacity: 0.5;
 
     // ... when it is being hovered over
-    .da-chat .da-content:hover > .flex-spacer:not(:only-child):not(:hover) + & {
+    .da-chat .da-content:hover > .da-flex:not(:only-child):not(:hover) + & {
         transform: translateX(0px) perspective(0em) rotateY(0deg) scale(1);
         opacity: 1;
     }
