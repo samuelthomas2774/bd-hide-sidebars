@@ -14,7 +14,7 @@ Save the file `hide-sidebars.theme.css` from the [releases][] page to the Better
 
 #### BetterDiscord v2
 
-Download the zip archive from the [releases][] page and extract it to the BetterDiscord themes folder. Then in the themes panel, click the refresh button on the Installed tab.
+Save the file `hide-sidebars.bd` from the [releases][] page to the BetterDiscord themes folder. Then in the themes panel, click the refresh button on the Installed tab.
 
 [releases]: https://github.com/samuelthomas2774/bd-hide-sidebars/releases
 
@@ -30,4 +30,6 @@ Screenshots
 Building
 ---
 
-Run `npm run release` to create the `.theme.css` file for BetterDiscord v1. BetterDiscord v2 automatically compiles themes for you.
+Run `npm run release` to create the `.theme.css` file for BetterDiscord v1.
+
+Run `npm run pack` to create the `.bd` file for BetterDiscord v2. For development create a symlink to the repository in (or move the repository to) the BetterDiscord themes folder and BetterDiscord will automatically compile the theme for you.

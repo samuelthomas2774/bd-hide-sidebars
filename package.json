@@ -1,13 +1,17 @@
 {
     "devDependencies": {
         "gulp": "^4.0.0",
+        "gulp-asar": "^1.0.0",
         "gulp-inject-string": "^1.1.1",
+        "gulp-json-editor": "^2.5.1",
         "gulp-rename": "^1.2.2",
         "gulp-sass": "^4.0.1",
-        "node-sass": "^4.8.3",
+        "merge2": "^1.2.3",
+        "node-sass": "^4.11.0",
         "pump": "^3.0.0"
     },
     "scripts": {
+        "pack": "gulp pack",
         "build": "gulp build",
         "watch": "gulp watch",
         "release": "gulp release"
