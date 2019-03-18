@@ -19,7 +19,7 @@
         &.da-chat > .da-content [class*="messages-"],
         &.da-chat > .da-content > .da-flex > form,
         &.da-chat > .da-content > .da-flex > form > .da-typing {
-            transition: padding-left 0.2s ease, padding-right 0.2s ease, margin-left 0.2s ease;
+            transition: padding-left 0.2s ease, padding-right 0.2s ease, margin-left 0.2s ease, margin-right 0.2s ease;
             padding-left: 100px;
             padding-right: 100px;
         }
@@ -43,7 +43,7 @@
             float: right;
             width: 5px;
             height: 100vh;
-            margin-right: 0px;
+            margin-right: 0;
             margin-left: -5px;
             z-index: 2;
             background-image: linear-gradient(to left, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.06));
@@ -62,12 +62,12 @@
 
     // Channel list when hovered over
     &:hover {
-        transform: translateX(0px) perspective(0em) rotateY(0deg) scale(1);
+        transform: translateX(0) perspective(0) rotateY(0deg) scale(1);
         opacity: 1;
 
         // Main panel when the channel list is being hovered over
         + div {
-            margin-left: 0px;
+            margin-left: 0;
 
             // Main panel header
             &:not(.da-chat) > :not(.da-scrollerWrap),
@@ -82,15 +82,19 @@
             &.da-chat > .da-content [class*="messages-"],
             &.da-chat > .da-content > .da-flex > form,
             &.da-chat > .da-content > .da-flex > form > .da-typing {
-                margin-right: -70px;
+                margin-right: -10px;
                 padding-left: 0;
                 padding-right: 0;
+            }
+            &.da-chat > .da-content > .da-flex > form,
+            &.da-chat > .da-content > .da-flex > form > .da-typing {
+                margin-right: 10px;
             }
 
             &.da-chat > .da-content > .da-flex .da-newMessagesBar,
             &.da-chat > .da-content > .da-flex .da-jumpToPresentBar {
                 margin-left: 0;
-                margin-right: -70px;
+                margin-right: 0;
             }
 
             // Main panel contents shadow
@@ -129,7 +133,7 @@ svg.da-iconInactive[name="People"] {
         float: left;
         width: 5px;
         height: 100%;
-        margin-left: 0px;
+        margin-left: 0;
         z-index: 2;
         background-image: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.06));
         .theme-light & {
@@ -142,20 +146,24 @@ svg.da-iconInactive[name="People"] {
 
 // Chat contents when the members list is being hovered over
 .da-chat .da-content:hover > .da-flex:not(:only-child):not(:hover) {
-    margin-right: 0px;
+    margin-right: 0;
 
     [class*="messages-"],
     > form,
     > form > .da-typing {
-        padding-left: 0px;
-        padding-right: 0px;
-        margin-left: -70px;
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: -10px;
+    }
+    > form,
+    > form > .da-typing {
+        margin-left: 10px;
     }
 
     .da-newMessagesBar,
     .da-jumpToPresentBar {
-        margin-left: -70px;
-        margin-right: 0px;
+        margin-left: 0;
+        margin-right: 0;
     }
 
     // Chat contents shadow
@@ -174,7 +182,7 @@ svg.da-iconInactive[name="People"] {
 
     // ... when it is being hovered over
     .da-chat .da-content:hover > .da-flex:not(:only-child):not(:hover) + & {
-        transform: translateX(0px) perspective(0em) rotateY(0deg) scale(1);
+        transform: translateX(0) perspective(0) rotateY(0deg) scale(1);
         opacity: 1;
     }
 }
