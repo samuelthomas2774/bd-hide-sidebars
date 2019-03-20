@@ -1,3 +1,5 @@
+$has-data-attributes: true !default;
+
 // Channel list
 .da-channels {
     transition: transform 0.2s ease, opacity 0.2s ease;
@@ -13,8 +15,15 @@
         margin-left: -210px;
 
         // Main panel header and contents
-        &:not(.da-chat) > :not(.da-scrollerWrap),
-        &:not(.da-chat) > .da-scrollerWrap > .da-scroller,
+        &:not(.da-chat):not(.da-applicationStore) > :not(.da-scrollerWrap):not(.da-friendsTable):not(.da-feedWrapper),
+        &:not(.da-chat):not(.da-applicationStore) > .da-scrollerWrap > .da-scroller,
+        .da-friendsTable > .da-scrollerWrap > .da-scroller,
+        .da-friendsTable .da-friendTableAddHeader .da-friendsTableAdd,
+        .da-friendsTable .da-friendTableSuggestionsHeader,
+        &.da-applicationStore > * > .da-headerBar,
+        &.da-applicationStore > * > .da-scrollerWrap > .da-scroller,
+        .da-feedWrapper > .da-headerBar,
+        .da-feedWrapper > .da-scrollerWrap > .da-scroller > .da-body,
         &.da-chat > .da-titleWrapper > div,
         &.da-chat > .da-content [class*="messages-"],
         &.da-chat > .da-content > .da-flex > form,
@@ -24,10 +33,17 @@
             padding-right: 100px;
         }
 
+        .da-friendsTable .da-friendTableAddHeader .da-friendsTableAdd,
+        .da-friendsTable .da-friendTableSuggestionsHeader {
+            padding-left: 110px;
+            padding-right: 110px;
+        }
+
         &.da-chat > .da-content > .da-flex > form > .da-typing {
             box-sizing: border-box;
         }
 
+        .da-friendsTable .da-friendsTableHeader,
         &.da-chat > .da-content > .da-flex .da-newMessagesBar,
         &.da-chat > .da-content > .da-flex .da-jumpToPresentBar {
             transition: margin-left 0.2s ease, margin-right 0.2s ease;
@@ -36,7 +52,10 @@
         }
 
         // Main panel contents shadow - this is shown when the channel list is showing and some of the main panel contents is hidden
-        &:not(.da-chat) > .da-scrollerWrap::after,
+        &:not(.da-chat):not(.da-gameLibrary) > .da-scrollerWrap::after,
+        .da-friendsTable > .da-scrollerWrap::after,
+        &.da-applicationStore > * > .da-scrollerWrap::after,
+        .da-feedWrapper > .da-scrollerWrap::after,
         &.da-chat > .da-content::after {
             content: "";
             position: relative;
@@ -53,10 +72,28 @@
             opacity: 0;
             transition: opacity 0.2s ease;
         }
+
+        .da-friendsTable {
+            margin-top: 0;
+            padding-top: 8px;
+
+            .da-friendsTableHeader + .da-scrollerWrap::after {
+                margin-top: -8px + -8px + -18px + -8px + -1px;
+            }
+        }
+
         // Move the shadow over a bit for the members list
-        &.da-chat > .da-content::after {
-            margin-left: -35px;
-            margin-right: 30px;
+        @if $has-data-attributes {
+            &.da-chat.bd-isGroupChannel > .da-content::after,
+            &.da-chat.bd-isGuildChannel > .da-content::after {
+                margin-left: -35px;
+                margin-right: 30px;
+            }
+        } @else {
+            &.da-chat > .da-content::after {
+                margin-left: -35px;
+                margin-right: 30px;
+            }
         }
     }
 
@@ -70,15 +107,20 @@
             margin-left: 0;
 
             // Main panel header
-            &:not(.da-chat) > :not(.da-scrollerWrap),
-            &:not(.da-chat) > .da-scrollerWrap > .da-scroller,
+            &:not(.da-chat):not(.da-applicationStore) > :not(.da-scrollerWrap):not(.da-friendsTable):not(.da-feedWrapper),
+            &:not(.da-chat):not(.da-applicationStore) > .da-scrollerWrap > .da-scroller,
+            &.da-applicationStore > * > .da-headerBar,
+            .da-feedWrapper > .da-headerBar,
             &.da-chat > .da-titleWrapper > div {
                 padding-left: 20px;
             }
 
             // Main panel contents
-            &:not(.da-chat) > :nth-child(2):not(.da-scrollerWrap),
-            &:not(.da-chat) > :nth-child(2).da-scrollerWrap > .da-scroller,
+            &:not(.da-chat):not(.da-applicationStore) > :nth-child(2):not(.da-scrollerWrap):not(.da-friendsTable):not(.da-feedWrapper),
+            &:not(.da-chat):not(.da-applicationStore) > :nth-child(2).da-scrollerWrap > .da-scroller,
+            .da-friendsTable > .da-scrollerWrap > .da-scroller,
+            &.da-applicationStore > * > .da-scrollerWrap > .da-scroller,
+            .da-feedWrapper > .da-scrollerWrap > .da-scroller > .da-body,
             &.da-chat > .da-content [class*="messages-"],
             &.da-chat > .da-content > .da-flex > form,
             &.da-chat > .da-content > .da-flex > form > .da-typing {
@@ -91,6 +133,13 @@
                 margin-right: 10px;
             }
 
+            .da-friendsTable .da-friendTableAddHeader .da-friendsTableAdd,
+            .da-friendsTable .da-friendTableSuggestionsHeader {
+                padding-left: 30px;
+                padding-right: 30px;
+            }
+
+            .da-friendsTable .da-friendsTableHeader,
             &.da-chat > .da-content > .da-flex .da-newMessagesBar,
             &.da-chat > .da-content > .da-flex .da-jumpToPresentBar {
                 margin-left: 0;
@@ -99,6 +148,9 @@
 
             // Main panel contents shadow
             &:not(.da-chat) > .da-scrollerWrap::after,
+            .da-friendsTable > .da-scrollerWrap::after,
+            &.da-applicationStore > * > .da-scrollerWrap::after,
+            .da-feedWrapper > .da-scrollerWrap::after,
             &.da-chat > .da-content::after {
                 opacity: 1;
             }

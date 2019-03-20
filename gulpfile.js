@@ -62,7 +62,7 @@ gulp.task('release', function () {
     const header = `//META${JSON.stringify(header_meta)}*//\n`;
 
     return pump([
-        gulp.src('src/hide-sidebars.scss'),
+        gulp.src('src/bdv1-entry.scss'),
 
         rename('hide-sidebars.min.css'),
         sass({ outputStyle: 'compressed' }),
