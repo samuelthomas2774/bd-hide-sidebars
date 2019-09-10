@@ -1,7 +1,7 @@
 $has-data-attributes: true !default;
 
 // Channel list
-.da-sidebar {
+.da-content > .da-sidebar {
     transition: transform 0.2s ease, opacity 0.2s ease;
 
     transform: translateX(-3px) perspective(20em) rotateY(2deg) scale(0.95);
