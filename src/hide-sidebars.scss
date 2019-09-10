@@ -240,3 +240,20 @@ svg.da-iconInactive[name="People"] {
         opacity: 1;
     }
 }
+
+// Disable discover section breakpoints
+.da-outerContainer > .da-container > .da-discoveryFeed > .da-scrollerWrap > .da-scroller > .da-container {
+    display: block;
+    padding-left: 28px;
+    padding-right: 28px;
+
+    .da-section > .da-grid {
+        display: block;
+
+        > .da-gridItem {
+            display: inline-block;
+            margin-right: 12px;
+            margin-bottom: 12px;
+        }
+    }
+}
