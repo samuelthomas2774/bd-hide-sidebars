@@ -1,13 +1,14 @@
 {
+    "private": true,
     "devDependencies": {
-        "gulp": "^4.0.0",
+        "gulp": "^4.0.2",
         "gulp-asar": "^1.0.0",
-        "gulp-inject-string": "^1.1.1",
-        "gulp-json-editor": "^2.5.1",
-        "gulp-rename": "^1.2.2",
-        "gulp-sass": "^4.0.1",
-        "merge2": "^1.2.3",
-        "node-sass": "^4.11.0",
+        "gulp-inject-string": "^1.1.2",
+        "gulp-json-editor": "^2.5.3",
+        "gulp-rename": "^1.4.0",
+        "gulp-sass": "^4.0.2",
+        "merge2": "^1.2.4",
+        "node-sass": "^4.12.0",
         "pump": "^3.0.0"
     },
     "scripts": {
