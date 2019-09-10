@@ -24,6 +24,7 @@ $has-data-attributes: true !default;
         &.da-applicationStore > * > .da-scrollerWrap > .da-scroller,
         .da-feedWrapper > .da-headerBar,
         .da-feedWrapper > .da-scrollerWrap > .da-scroller > .da-body,
+        &.da-outerContainer > .da-themed,
         &.da-chat > .da-titleWrapper > div,
         &.da-chat > .da-content [class*="messages-"],
         &.da-chat > .da-content > .da-flex > form,
@@ -107,17 +108,18 @@ $has-data-attributes: true !default;
             margin-left: 0;
 
             // Main panel header
-            &:not(.da-chat):not(.da-applicationStore) > :not(.da-scrollerWrap):not(.da-friendsTable):not(.da-feedWrapper),
-            &:not(.da-chat):not(.da-applicationStore) > .da-scrollerWrap > .da-scroller,
+            &:not(.da-chat):not(.da-applicationStore):not(.da-outerContainer) > :not(.da-scrollerWrap):not(.da-friendsTable):not(.da-feedWrapper),
+            &:not(.da-chat):not(.da-applicationStore):not(.da-outerContainer) > .da-scrollerWrap > .da-scroller,
             &.da-applicationStore > * > .da-headerBar,
             .da-feedWrapper > .da-headerBar,
+            &.da-outerContainer > .da-themed,
             &.da-chat > .da-titleWrapper > div {
                 padding-left: 20px;
             }
 
             // Main panel contents
-            &:not(.da-chat):not(.da-applicationStore) > :nth-child(2):not(.da-scrollerWrap):not(.da-friendsTable):not(.da-feedWrapper),
-            &:not(.da-chat):not(.da-applicationStore) > :nth-child(2).da-scrollerWrap > .da-scroller,
+            &:not(.da-chat):not(.da-applicationStore):not(.da-outerContainer) > :nth-child(2):not(.da-scrollerWrap):not(.da-friendsTable):not(.da-feedWrapper),
+            &:not(.da-chat):not(.da-applicationStore):not(.da-outerContainer) > :nth-child(2).da-scrollerWrap > .da-scroller,
             .da-friendsTable > .da-scrollerWrap > .da-scroller,
             &.da-applicationStore > * > .da-scrollerWrap > .da-scroller,
             .da-feedWrapper > .da-scrollerWrap > .da-scroller > .da-body,
